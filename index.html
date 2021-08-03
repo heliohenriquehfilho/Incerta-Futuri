@@ -43,20 +43,31 @@
         function run(){
             document.getElementById("message").hidden = false
             document.getElementById("bttn").hidden = true
+            document.getElementById("start").hidden = false
+            var msc = new Audio('mixkit-piano-horror-671.mp3')
+            msc.play()
+        }
+        function start(){
+            document.getElementById("new").hidden = false
+            document.getElementsByClassName("audio").hidden = true
+
+
         }
     </script>
     <body>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css"/>
         <div class="audio">
-            <audio src="mixkit-piano-horror-671.mp3" autoplay>
-            </audio>
             <div class="container1">
                 
             </div>
             <div class="container2">
                 <button id="bttn" onclick="run()"> PLAY </button>
                 <h1 id="message" hidden="true"> FUCK THIS! </h1>
+                <button hidden="true" id="start" onclick="start()"> START </button>
             </div>
+        </div>
+        <div hidden="true" id="new">
+            <h1> WELCOME TO THE JUNGLE </h1>
         </div>
     </body>
 </html>
