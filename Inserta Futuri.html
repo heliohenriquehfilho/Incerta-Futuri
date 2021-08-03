@@ -1,0 +1,62 @@
+<html>
+    <style>
+        body, html{
+            height: 99%;
+            background-color: black;
+        }
+        .audio{
+            background-image: url("incerta\ futuri.png");
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            background-attachment: fixed;
+            width: 100%;
+            font-family: metropolis;
+        }
+        .container1, .container2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            font-family: 'MetropolisRegular';
+            font-weight: normal;
+            font-style: normal;
+            color: #8f0000;
+            opacity: 58%;
+            flex-direction: column;
+            text-shadow: 2px 2px black;
+        }
+        button{
+            font-family: 'MetropolisRegular';
+            font-weight: normal;
+            font-style: normal;
+            color: #8f0000;
+            font-size: 16px;
+          }
+    </style>
+    <script>
+        function run(){
+            document.getElementById("message").hidden = false
+            document.getElementById("bttn").hidden = true
+        }
+    </script>
+    <body>
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css"/>
+        <div class="audio">
+            <audio src="mixkit-piano-horror-671.mp3" autoplay>
+            </audio>
+            <div class="container1">
+                
+            </div>
+            <div class="container2">
+                <button id="bttn" onclick="run()"> PLAY </button>
+                <h1 id="message" hidden="true"> FUCK THIS! </h1>
+            </div>
+        </div>
+    </body>
+</html>
