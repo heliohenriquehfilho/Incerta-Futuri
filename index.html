@@ -38,6 +38,16 @@
             color: #8f0000;
             font-size: 16px;
           }
+          #new{
+              text-align: center;
+              color: wheat;
+              height: 100%;
+              font-size: 21px;
+          }
+          .wakingup{
+              padding: 10px;
+              font-size: 21px;
+          }
     </style>
     <script>
         function run(){
@@ -48,15 +58,16 @@
             msc.play()
         }
         function start(){
-            document.getElementById("new").hidden = false
-            document.getElementsByClassName("audio").hidden = true
-
-
+            document.getElementById("new").hidden = false;
+            document.getElementById("scro").hidden = false;
+            document.getElementsByClassName("container2").hidden = true;
+            document.getElementById('start').hidden = true;
+            document.getElementById('message').hidden = true;
         }
     </script>
     <body>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css"/>
-        <div class="audio">
+        <div hidden="false" id="ad" class="audio">
             <div class="container1">
                 
             </div>
@@ -64,10 +75,23 @@
                 <button id="bttn" onclick="run()"> PLAY </button>
                 <h1 id="message" hidden="true"> FUCK THIS! </h1>
                 <button hidden="true" id="start" onclick="start()"> START </button>
+                <h1 hidden="true" id="scro"> Role para baixo </h1>
             </div>
         </div>
         <div hidden="true" id="new">
-            <h1> WELCOME TO THE JUNGLE </h1>
+            <h1> BEM-VINDO... QUANTO TEMPO SUMIDO </h1>
+            <p> Você acorda, atordoado em uma cama de hospital</p>
+            <p> Tudo ao seu redor parece estar abandonado ...</p>
+            <p> Você não se lembra de nada...</p>
+            <div class="wakingup">
+                <p> Você escuta um barulho vindo da janela... </p>
+                <p> quando estava prestes a virar para dar uma olha um grito vindo dos corredores do hospital </p>
+                <p> o que você faz? </p>
+                <div class="choices"> 
+                    <button> Olhar pela janela </button>
+                    <button> Ir atrás do barulho </button>
+                </div>
+            </div>
         </div>
     </body>
 </html>
