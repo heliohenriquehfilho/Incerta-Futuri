@@ -3,6 +3,9 @@
         body, html{
             height: 99%;
             background-color: black;
+            color: wheat;
+            font-size: 18px;
+            text-align: center;
         }
         .audio{
             background-image: url("incerta\ futuri.png");
@@ -36,7 +39,7 @@
             font-weight: normal;
             font-style: normal;
             color: #8f0000;
-            font-size: 16px;
+            font-size: 21px;
           }
           #new{
               text-align: center;
@@ -47,6 +50,7 @@
           .wakingup{
               padding: 10px;
               font-size: 21px;
+              transition: ease-in;
           }
     </style>
     <script>
@@ -64,6 +68,14 @@
             document.getElementById('start').hidden = true;
             document.getElementById('message').hidden = true;
         }
+        function janela(){
+            document.getElementById("new").hidden = true;
+            document.getElementById("janela").hidden = false;
+        }
+        function barulho(){
+            document.getElementById("new").hidden = true;
+            document.getElementById("barulho").hidden = false;
+        }
     </script>
     <body>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css"/>
@@ -78,7 +90,7 @@
                 <h1 hidden="true" id="scro"> Role para baixo </h1>
             </div>
         </div>
-        <div hidden="true" id="new">
+        <div hidden="false" id="new">
             <h1> BEM-VINDO... QUANTO TEMPO SUMIDO </h1>
             <p> Você acorda, atordoado em uma cama de hospital</p>
             <p> Tudo ao seu redor parece estar abandonado ...</p>
@@ -88,10 +100,40 @@
                 <p> quando estava prestes a virar para dar uma olha um grito vindo dos corredores do hospital </p>
                 <p> o que você faz? </p>
                 <div class="choices"> 
-                    <button> Olhar pela janela </button>
-                    <button> Ir atrás do barulho </button>
+                    <button onclick="janela()"> Olhar pela janela </button>
+                    <button onclick="barulho()"> Ir atrás do barulho </button>
                 </div>
             </div>
+        </div>
+        <div hidden="true" id="janela" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+            <h1> Voce escolheu olhar pela janela </h1>
+            <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
+            <p>
+                Ao chegar perto da janela você começar a ver cidade abandonada <br>
+                onde a natureza reencontra o seu lugar.... <br>
+                <br>
+                Em baixo de um pinheiro você vê um homem deitado... <br>
+                será que ele está dormindo? <br>
+            </p>
+            <h1> Você tem duas opções </h1>
+            <button> Tentar chamar ele grintando </button>
+            <button> Levantar da cama </button>
+        </div>
+        <div hidden="true" id="barulho" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+            <h1> Voce escolheu seguir o barulho </h1>
+            <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
+            <p>
+                Ao sair do seu quarto você encontra corredores vazions <br>
+                <i>destruidos</i><br>
+                <br>
+                <br>
+                Continuando andando pelos corredores <i> silenciosos </i> você começa a se sentir confuso <br>
+                <br>
+                <i> <b> cade o barulho? </b> </i> você se pergunta <br>
+            </p>
+            <h1> Você tem duas opções </h1>
+            <button> Chamar alguem </button>
+            <button> Continuar em silencio </button>
         </div>
     </body>
 </html>
