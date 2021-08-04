@@ -1,4 +1,8 @@
 <html>
+    <head>
+        <title> INSERTA FUTURI </title>
+        <link rel="sortcut icon" href="i.f..png" type="image/x-icon" />;
+    </head>
     <style>
         body, html{
             height: 99%;
@@ -56,7 +60,7 @@
     <script>
         function run(){
             document.getElementById("message").hidden = false
-            document.getElementById("bttn").hidden = true
+            document.getElementById("bttn2").hidden = true
             document.getElementById("start").hidden = false
             var msc = new Audio('mixkit-piano-horror-671.mp3')
             msc.play()
@@ -84,7 +88,8 @@
                 
             </div>
             <div class="container2">
-                <button id="bttn" onclick="run()"> PLAY </button>
+                <input hidden="true" onclick="run()" type="image" src="https://icon-library.com/images/play-button-icon-png/play-button-icon-png-23.jpg" id="bttn" width="100" height="100" alt="submit"/>  
+                <button id="bttn2" onclick="run()"> START </button>
                 <h1 id="message" hidden="true"> FUCK THIS! </h1>
                 <button hidden="true" id="start" onclick="start()"> START </button>
                 <h1 hidden="true" id="scro"> Role para baixo </h1>
