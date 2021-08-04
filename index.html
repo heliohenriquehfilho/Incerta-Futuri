@@ -56,54 +56,100 @@
               font-size: 21px;
               transition: ease-in;
           }
+          h1{
+              margin-bottom: -3px;
+              margin-top: -3px;
+          }
     </style>
     <script>
         function run(){
+            window.scrollTo(0, 0);
             document.getElementById("message").hidden = false
             document.getElementById("bttn2").hidden = true
             document.getElementById("start").hidden = false
             var msc = new Audio('mixkit-piano-horror-671.mp3')
             msc.play()
+            window.scrollTo(0, 0);
         }
         function start(){
+            window.scrollTo(0, 0);
             document.getElementById("new").hidden = false;
             document.getElementById("scro").hidden = false;
-            document.getElementsByClassName("container2").hidden = true;
             document.getElementById('start').hidden = true;
             document.getElementById('message').hidden = true;
+            document.getElementById("audio").style.display = 'none'
+            window.scrollTo(0, 0);
         }
         function janela(){
+            window.scrollTo(0, 0);
             document.getElementById("new").hidden = true;
             document.getElementById("janela").hidden = false;
+            window.scrollTo(0, 0);
         }
         function barulho(){
+            window.scrollTo(0, 0);
             document.getElementById("new").hidden = true;
             document.getElementById("barulho").hidden = false;
+            window.scrollTo(0, 0);
         }
         function gritar(){
+            window.scrollTo(0, 0);
             document.getElementById("janela").hidden = true;
             document.getElementById("gritar").hidden = false;
+            window.scrollTo(0, 0);
         }
         function C1a(){
+            window.scrollTo(0, 0);
             document.getElementById("gritar").hidden = true;
             document.getElementById("c1a").hidden = false;
         }
         function levantar(){
+            window.scrollTo(0, 0);
             document.getElementById("janela").hidden = true;
-            document.getElementById("levantar").hidden = false; 
+            document.getElementById("levantar").hidden = false;
         }
         function C1b(){
+            window.scrollTo(0, 0);
             document.getElementById("levantar").hidden = true;
             document.getElementById("c1b").hidden = false;
+            $(window).scrollTop(0);
+        }
+        function concordar(){
+            window.scrollTo(0, 0);
+            document.getElementById("c1b").hidden = true;
+            document.getElementById("concordar").hidden = false;
+            $(window).scrollTop(0);
+        }
+        function concordar2(){
+            window.scrollTo(0, 0);
+            document.getElementById("c1a").hidden = true;
+            document.getElementById("concordar2").hidden = false;
+            $(window).scrollTop(0);
+        }
+        function chamar(){
+            window.scrollTo(0, 0);
+            document.getElementById("barulho").hidden = true;
+            document.getElementById("chamar").hidden = false;
+            $(window).scrollTop(0);
+        }
+        function c1c(){
+            window.scrollTo(0, 0);
+            document.getElementById("chamar").hidden = true;
+            document.getElementById("c1c").hidden = false;
+        }
+        function silencio (){
+            window.scrollTo(0, 0);
+            document.getElementById("barulho").hidden = true;
+            document.getElementById("silencio").hidden = false
         }
     </script>
     <body>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css"/>
-        <div hidden="false" id="ad" class="audio">
+        <div class="audio" id="audio">
             <div class="container1">
                 
             </div>
-            <div class="container2">
+            <div hidden="false" class="container2">
                 <input hidden="true" onclick="run()" type="image" src="https://icon-library.com/images/play-button-icon-png/play-button-icon-png-23.jpg" id="bttn" width="100" height="100" alt="submit"/>  
                 <button id="bttn2" onclick="run()"> START </button>
                 <h1 id="message" hidden="true"> FUCK THIS! </h1>
@@ -126,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div hidden="true" id="janela" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+        <div hidden="true" id="janela" style="padding: 10px; vertical-align: middle; place-items:unset;">
             <h1> Voce escolheu olhar pela janela </h1>
             <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
             <p>
@@ -140,7 +186,7 @@
             <button onclick="gritar()"> Tentar chamar ele grintando </button>
             <button onclick="levantar()"> Levantar da cama </button>
         </div>
-        <div hidden="true" id="levantar" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+        <div hidden="true" id="levantar" style="padding: 10px; vertical-align: middle; place-items:unset;">
             <h1> Voce escolheu <i> <b> levantar</b></i></h1>
             <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
             <p>
@@ -164,7 +210,7 @@
             </p>
             <button onclick="C1b()"> Continuar </button>
         </div>
-        <div hidden="true" id="c1b" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+        <div hidden="true" id="c1b" style="padding: 10px; vertical-align: middle; place-items:unset;">
             <h1> Capítulo 01: Águas Claras </h1>
             <h3> Acampamento Dash, 07:30 a.m. </h3>
             <p>
@@ -202,11 +248,46 @@
                 Mas se eu concordar o comandante vai querer começar uma guerra <br>
             </p>
             <h1> O que você quer fazer? </h1>
-            <button> Concordar com a junção </button>
-            <button> Recusar a proposta </button>
+            <button onclick="concordar()"> Concordar com a junção </button>
+            <button onclick="recusar()"> Recusar a proposta </button>
 
         </div>
-        <div hidden="true" id="gritar" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+        <div hidden="true" id="concordar" style="padding: 10px; vertical-align: middle; place-items:unset;">
+            <h1> Você <i>concordou</i> com a proposta</h1>
+            <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
+            <p style="font-size: 12px;"> <i>Seu relacionamento com Scarlet melhorou   </i> </p>
+            <p>
+                Você está andando agora, sozinho, refletivo, será que você fez uma boa escolha? <br>
+                Lucius ainda em seu posto, esse homem é de grande admiração do acampamento <br>
+                dizem que negros não envelhecem, o cara tem 75 anos e tem cara de 30 <br>
+                a história não é a das mais felizes <br>
+                <br>
+                <i> Ele e sua mulher estavam juntos com o comandante desde o inicio do apocalipse, <br>
+                sua esposa tinha achado uma criança perdida no dia em que o acampamento foi fundado, <br>
+                uma jovem de 5 anos, que rápidamente virou o mundo todo deles, mas infelizmente, na noite <br>
+                mais fria do inverno, Marta (esposa de Lucius) e Celine (sua filha adotada), estavam atrás de lenha <br>
+                para a fogueira, quando um grupo de zumbies atacou, com os gritos Lucius foi correndo ajuda-las, mas chegando lá <br>
+                era tarde de mais, os ossos já estavam aparecendo, e o que sobrou foi um medalhão que Marta tinha feito e dado a celine <br>
+                hoje Lucius não tira o medalhão	do corpo para nada <br> </i>
+                <br>
+                Lucius olha em sua direção, e faz um sinal com a cabeça para você ir até ele <br>
+                <i> "Que vista linda" </i> você fala para ele ao olhar o lago <br>
+                Realmente a visão é diferente da situação de dentro do muro, a natureza sempre foi linda, principalmente sem a interferência humana <br>
+                <i> "Esse era o lugar favorito de Celine, ela vinha todo dia me dar boa noite" </i> fala Lucius <br>
+                <i> "Ela me parece ser uma criança adorável" </i> você fala <br>
+                <i> "Minha pricesa era" </i> diz Lucius sorrindo olhando para o medalhão <br>
+                após alguns momentos de silêncio, Lucius olha para você e fala: <br>
+                <i> "Eu posso ser idoso, mas não sou burro, eu ouço os rumores  </i><br>
+                <i> Scarlett é extremamente inteligente, uma das pessoas que eu mais confio aqui dentro</i><br>
+                <i> mas as vezes ela não pensa em todos os cenários, e tem uma coisa que ela pode estar esquecendo</i><br>
+                <i> o comandante é louco, principalmente por poder, mas ele não aceita traição, </i><br>
+                <i> pense muito bem nas suas atitudes jovem, eu não gosto muito do comandante, mas ele mantem esse lugar em ordem"</i> <br>
+            </p>
+            <h1> O que você fala? </h1>
+            <button> Não sei do que você está falando </button>
+            <button> Mas temos que pensar no melhor para a comunidade</button>
+        </div>
+        <div hidden="true" id="gritar" style="padding: 10px; vertical-align: middle; place-items:unset;">
             <h1> Voce escolheu <i> <b> chamar</b></i></h1>
             <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
             <p>
@@ -231,7 +312,7 @@
             </p>
             <button onclick="C1a()"> Continuar </button>
         </div>
-        <div hidden="true" id="c1a" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+        <div hidden="true" id="c1a" style="padding: 10px; vertical-align: middle; place-items:unset;">
             <h1> Capítulo 01: Águas Claras </h1>
             <h3> Acampamento Dash, 07:30 a.m. </h3>
             <p>
@@ -268,8 +349,47 @@
                 Mas se eu concordar o comandante vai querer começar uma guerra <br>
             </p>
             <h1> O que você quer fazer? </h1>
-            <button> Concordar com a junção </button>
+            <button onclick="concordar2()"> Concordar com a junção </button>
             <button> Recusar a proposta </button>
+        </div>
+        <div hidden="true" id="concordar2" style="padding: 10px; vertical-align: middle; place-items:unset;">
+            <h1> Você <i>concordou</i> com a proposta</h1>
+            <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
+            <p style="font-size: 12px;"> <i>Seu relacionamento com Scarlet melhorou   </i> </p>
+            <p>
+                Você está andando agora, sozinho, refletivo, será que você fez uma boa escolha? <br>
+                Lucius ainda em seu posto, esse homem é de grande admiração do acampamento <br>
+                dizem que negros não envelhecem, o cara tem 75 anos e tem cara de 30 <br>
+                a história não é a das mais felizes <br>
+                <br>
+                <i> Ele e sua mulher estavam juntos com o comandante desde o inicio do apocalipse, <br>
+                sua esposa tinha achado uma criança perdida no dia em que o acampamento foi fundado, <br>
+                uma jovem de 5 anos, que rápidamente virou o mundo todo deles, mas infelizmente, na noite <br>
+                mais fria do inverno, Marta (esposa de Lucius) e Celine (sua filha adotada), estavam atrás de lenha <br>
+                para a fogueira, quando um grupo de zumbies atacou, com os gritos Lucius foi correndo ajuda-las, mas chegando lá <br>
+                era tarde de mais, os ossos já estavam aparecendo, e o que sobrou foi um medalhão que Marta tinha feito e dado a celine <br>
+                hoje Lucius não tira o medalhão	do corpo para nada <br> </i>
+                <br>
+                Lucius olha em sua direção, e faz um sinal com a cabeça para você ir até ele <br>
+                <i> "Que vista linda" </i> você fala para ele ao olhar o lago <br>
+                Realmente a visão é diferente da situação de dentro do muro, a natureza sempre foi linda, principalmente sem a interferência humana <br>
+                <i> "Esse era o lugar favorito de Celine, ela vinha todo dia me dar boa noite" </i> fala Lucius <br>
+                <i> "Ela me parece ser uma criança adorável" </i> você fala <br>
+                <i> "Minha pricesa era" </i> diz Lucius sorrindo olhando para o medalhão <br>
+                após alguns momentos de silêncio, Lucius olha para você e fala: <br>
+
+                Após a conversa, você desce e vai para a sua barraca <br>
+                <br>
+                Após algumas horas o comandante te chama para conversar <br>
+                <i> " Eu estou contente com o seu serviço a comunidade <br>
+                    quero que você seja me conselheiro"</i> <br>
+                O que você deve fazer? você aceitou a proposta <br>
+                o que tornaria o que trabalho muito mais fácil na hora de unir os dois acampamentos <br>
+                porém corre o risco de causar um caos já que ele vai começar a confiar mais em você <br>
+            </p>
+            <h1> O que você fala? </h1>
+            <button> Aceitar o cargo </button>
+            <button> Recusar o cardo </button>
         </div>
         <div hidden="true" id="barulho" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
             <h1> Voce escolheu seguir o barulho </h1>
@@ -284,8 +404,95 @@
                 <i> <b> cade o barulho? </b> </i> você se pergunta <br>
             </p>
             <h1> Você tem duas opções </h1>
-            <button> Chamar alguem </button>
-            <button> Continuar em silencio </button>
+            <button onclick="chamar()"> Chamar alguem </button>
+            <button onclick="silencio()"> Continuar em silencio </button>
+        </div>
+        <div hidden="true" id="silencio" style="padding: 10px; vertical-align: middle; place-items: unset;">
+            <h1> Você escolheu <i> Ficam em Silêncio</i></h1>
+            <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
+            <p>
+                Com muito cuidado você vai silenciosamente até a porta ao final da ala sul <br>
+                muito arriscado seguir o barulho, já que você não sabe o que está causando-o. <br>
+                Ao chegar na rua, você encontra um rastro de sangue vindo de um pinheiro até a estrada <br>
+                ao olha ao seu redor, você percebe uma montanha com fumaça ao topo <br>
+                <br>
+                Você está caminhando em direção a montanha, já que pode ter algum humano que possa te ajudar <br>
+                no meio do caminho você encontra um senhor de idade caido no chão, o corpo parecia estar apodrecendo <br>
+                ao tentar se aproximar você mê ele se mechendo, ele se arrasta até outro corpo caido no chão mais a frente <br>
+                quando você olha de novo, ele está comendo aquele corpo <br>
+                <br>
+                você estranha o que está acontecendo mas logo percebe <br>
+                você está em um apocalipse zumbie <br>
+                e seu futuro está incerto <br>
+
+                <h1> <i> INCERTA FUTURI </i> </h1>
+                <h2> por: Helio Henrique </h2>
+
+                <i> O amanhã não está garantido, lembre-se disso! </i>
+            </p>
+            <button onclick="c1d()"> Continuar </button>
+        </div>
+        <div hidden="true" id="chamar" style="padding: 10px; vertical-align: middle; place-items:unset;">
+            <h1> Você escolheu <i>chamar alguém</i> </h1>
+            <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
+            <p>
+                Você chama <i> "Alguem ai? Precisa de ajuda? "</i> mas ninguém atende <br>
+                Olhando pela sua volta você vê um corredor na ala norte, que parece ser infinito, no seu campo de visão não têm ninguém. <br>
+                <i> "Olá" </i> você fala, mas ninguém te responde <br>
+                <br>
+                você ouve um barulho na ala sul, quando você se vira vê um vulto passando pela porta <br>
+                Quando você se aproxima, percebe uns barulhos estranhos, como se alguém tivesse morrendo <br>
+                seu coração começa a acelarar, e ao chegar na porta você vê uma mulher comendo o braço de um homem <br>
+                <br>
+                Ao olha a pele da mulher que parecia que estava apodrencendo <br>
+                E em volta ninguém estar por perto você perce.... <br>
+                você está em um apocalipse zumbie... <br>
+                e seu futuro está... incerto <br>
+                <br>
+
+            </p>
+            <h1> <i> INCERTA FUTURI </i> </h1>
+            <h2> por: Helio Henrique </h2>
+
+            <p> 
+                <br>
+                <i> O amanhã não está garantido, lembre-se disso! </i> <br>
+                <br>
+            </p>
+            <button onclick="c1c()"> continuar </button>
+        </div>
+        <div hidden="true" id="c1c" style="padding: 10px; vertical-align: middle; place-items:unset;">
+            <h1> Capítulo 01: Águas Claras </h1>
+            <h3> Hospital Regional Sul, 8:30 p.m.  </h3>
+            <p>
+                Você se encontra sozinho e com frio, a noite chega e você não tem abrigo <br>
+                existem algumas opções, mas você não tem treinamento para poder sobreviver <br>
+                agora tudo é questão de vida ou morte, mas naõ deixe com que as suas escolhas do passado <br>
+                <i> afetem o seu futuro </i>
+                <br>
+                <br>
+                No topo da montanha você vê fumaça, isso pode significar que tenha pessoas lá <br>
+                pessoas pode ser bom para você sobreviver, desde que seu relacionamento com elas estaja bom <br>
+                <br>
+                ao se aproximar da montanha uma gange de motoqueiros param na sua frente <br>
+                homens barbudos, grandes e musculosos, com roupas de coro e tatuagens no rosto <br>
+                você começa a ficar apreensivo <br>
+                <i> "Olha o que temos aqui... "</i> fala o lider <br>
+                <i> "desculpa estar no seu caminho, eu acabei de acordar no hospital, não sei onde estou..."</i> você fala <br>
+                <i> "Você est´em Águas Claras..."</i> fala o que parece ser o mais jovem <br>
+                eles começam a conversar entre si, você percebe que estão falando de você <br>
+                <br>
+                <br>
+                após um tempo, o lider olha para você e fala <i> " você me parece ser um cara legal ...</i> <br>
+                <i> se você quiser, temos um espaço, te oferecemos comida e proteção, mas você tem que ajudar... </i> <br>
+                <i> ajudar na caça, ajudar treinando para lutar, você terá que fazer a sua parte também..."</i><br>
+                eles parecem ser legais, podem ajudar muito a sua sobrevivencia... <br>
+                mas você não sabe se eles são de confiança <br>
+                <br>
+                <h1> O que você faz? </h1>
+            </p>
+            <button> Aceitar </button>
+            <button> Recusar </button>
         </div>
     </body>
 </html>
