@@ -88,6 +88,14 @@
             document.getElementById("gritar").hidden = true;
             document.getElementById("c1a").hidden = false;
         }
+        function levantar(){
+            document.getElementById("janela").hidden = true;
+            document.getElementById("levantar").hidden = false; 
+        }
+        function C1b(){
+            document.getElementById("levantar").hidden = true;
+            document.getElementById("c1b").hidden = false;
+        }
     </script>
     <body>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css"/>
@@ -131,6 +139,72 @@
             <h1> Você tem duas opções </h1>
             <button onclick="gritar()"> Tentar chamar ele grintando </button>
             <button onclick="levantar()"> Levantar da cama </button>
+        </div>
+        <div hidden="true" id="levantar" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+            <h1> Voce escolheu <i> <b> levantar</b></i></h1>
+            <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
+            <p>
+                
+                Meio fraco e cambaleando você levanta <br>
+                olha pela janela e o cara ainda está la <br>
+                tentar andar você até a porta meio tonto <br>
+                com muito esforço você abre a porta e sai do quarto <br>
+                você olha para a esquerda e não tem nada além de um corredor <br>
+                para a direita você vê uma porta aberta <br>
+                ao seguir pela porta você sai na floresta... a sua esquerda está o cara que você viu na janela <br>
+                ao tentar se aproximar outro jovem aparece, pega o cara pelo pescoço, levantando-o do chão <br>
+                em movimentos bruscos ele arranca o intestino de dentro do cara e começa a comer<br>
+                <br>
+
+                e sem acreditar muito você percebe... <br>
+                o apocalipse zumbie começou <br>
+                e o seu futuro está... incerto <br>
+                <h1> INCERTA FUTURI </h1>
+                <h2> por: Helio Henrique </h2>
+            </p>
+            <button onclick="C1b()"> Continuar </button>
+        </div>
+        <div hidden="true" id="c1b" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+            <h1> Capítulo 01: Águas Claras </h1>
+            <h3> Acampamento Dash, 07:30 a.m. </h3>
+            <p>
+                Lucius está de tocaia na torne norte, você olha para ele, pobre idoso, 5 anos já na mesma posição <br>
+                Scarlet chama você na ala leste, noticia boa você sabe que não é... quando é noticia bom com ela? <br>
+                ela tem uma reputação de sempre trazer noticia ruim ao acamapmento, mas ela foi quem te acolheu <br>
+                depois que você foi quase capturado por um zumbie, você quase morreu, deve a sua vida a ela <br>
+                ninguém no acampamento te julga apenas o comandante, honetamente ele só está no poder ainda por <br>
+                ninguém tem coragem de o enfrentar... até hoje pelo menos<br>
+            </p>
+            <p style="font-size: 10px;">
+                Dica: suas ações influenciam como os personagens irão regir a sua presença.
+            </p>
+            <p>
+                <i> "Precisamos conversar sobre o comandante" </i> falou Scarlet <br>
+                você começa a ficar nervoso... <br>
+                <i> "Ouvi falar que Jacksville está com interesse de expandir" </i> fala Scarlet <br>
+                <br>
+                Jacksville é outro acampamento da area de Aguas Claras o problema é que o comandante tem um problema com eles <br>
+                De acordo com as histórias do comandante, Jackson, o fundador de Jacksville era muito proximo de Jasmin <br>
+                Jasmin era a namorada (na época, por que ninguém aguenta ele tanto tempo) do comandante <br>
+                em uma noite quando o comandante estava de tocaia ele ouvi certos rumores e quando entrou na tenda de Jackson la estava ele... <br>
+                pelado... transando com Jasmin <br>
+                o comandante pegou os dois e os baniu de Dash <br>
+                ambos sairam pelados e sem rumo <br>
+                <br>
+                <i> "O plano é o seguinte, omitimos para o comandante, conversamos com Jacks (apelido de Jackson)<br>
+                    e o convecemos de juntar os dois acampamentos"</i> fala Scarlet <br>
+                <i> "Realmente parece ser uma ideia interesse, vamos tem mais comida para sobreviver, já que os melhores caçadores <br>
+                    estão com Jacks, e aumenta a nossa proteção" </i> Você fala <br>
+                <i> "Posso confiar em você? "</i> Pergunta Scarlet <br>
+                <br>
+                O que fazer? se eu aceitar a proposta de Scarlet, podemos trazer uma vida melhor para os nossos amigos <br>
+                também me sinto na obrigação de aceitar, já que por ela ter me salvado, sei que posso confiar nela <br>
+                Mas se eu concordar o comandante vai querer começar uma guerra <br>
+            </p>
+            <h1> O que você quer fazer? </h1>
+            <button> Concordar com a junção </button>
+            <button> Recusar a proposta </button>
+
         </div>
         <div hidden="true" id="gritar" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
             <h1> Voce escolheu <i> <b> chamar</b></i></h1>
