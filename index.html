@@ -80,6 +80,14 @@
             document.getElementById("new").hidden = true;
             document.getElementById("barulho").hidden = false;
         }
+        function gritar(){
+            document.getElementById("janela").hidden = true;
+            document.getElementById("gritar").hidden = false;
+        }
+        function C1a(){
+            document.getElementById("gritar").hidden = true;
+            document.getElementById("c1a").hidden = false;
+        }
     </script>
     <body>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css"/>
@@ -121,14 +129,79 @@
                 será que ele está dormindo? <br>
             </p>
             <h1> Você tem duas opções </h1>
-            <button> Tentar chamar ele grintando </button>
-            <button> Levantar da cama </button>
+            <button onclick="gritar()"> Tentar chamar ele grintando </button>
+            <button onclick="levantar()"> Levantar da cama </button>
+        </div>
+        <div hidden="true" id="gritar" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+            <h1> Voce escolheu <i> <b> chamar</b></i></h1>
+            <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
+            <p>
+                Você grita <i> "SENHOR" </i> mas ele não atende <br>
+                <i> "Estranho ele não atender, deve estar ferrado no sono mesmo" </i> <br>
+                <br>
+                mais uma vez você grita <i> "SENHOR" </i> dessa vez parece que está funcionado <br>
+                ele está se movendo <br>
+                <br>
+                você escuta um barulho estranho <br>
+                no final da rua você vê outro homem se aproximando <br>
+                ele parece estar com a perna machucada, mancando <br>
+                ao chegar perto do homem na árvore ele pega pelo pescoço, levantando-o bruscamente <br>
+                introduz violentamente a mão no estomago e puxa o intestino para fora <br>
+                rápidamente leva a mão até a boca e começa a comer o intestino <br>
+                <br>
+                e sem acreditar muito você percebe... <br>
+                o apocalipse zumbie começou <br>
+                e o seu futuro está... incerto <br>
+                <h1> INCERTA FUTURI </h1>
+                <h2> por: Helio Henrique </h2>
+            </p>
+            <button onclick="C1a()"> Continuar </button>
+        </div>
+        <div hidden="true" id="c1a" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
+            <h1> Capítulo 01: Águas Claras </h1>
+            <h3> Acampamento Dash, 07:30 a.m. </h3>
+            <p>
+                Lucius está de tocaia na torne norte, você olha para ele, pobre idoso, 5 anos já na mesma posição <br>
+                Scarlet chama você na ala leste, noticia boa você sabe que não é... quando é noticia bom com ela? <br>
+                ela tem uma reputação de sempre trazer noticia ruim ao acamapmento, mas ela foi quem te acolheu <br>
+                depois que você desmaiou no hospital, quem não iria também, você viu alguem ser comido vivo por <br>
+                um zumbie, ninguém no acampamento te julga apenas o comandante, honetamente ele só está no <br>
+                poder ainda por que ninguém tem coragem de o enfrentar... até hoje pelo menos<br>
+            </p>
+            <p style="font-size: 10px;">
+                Dica: suas ações influenciam como os personagens irão regir a sua presença.
+            </p>
+            <p>
+                <i> "Precisamos conversar sobre o comandante" </i> falou Scarlet <br>
+                você começa a ficar nervoso... <br>
+                <i> "Ouvi falar que Jacksville está com interesse de expandir" </i> fala Scarlet <br>
+                <br>
+                Jacksville é outro acampamento da area de Aguas Claras o problema é que o comandante tem um problema com eles <br>
+                De acordo com as histórias do comandante, Jackson, o fundador de Jacksville era muito proximo de Jasmin <br>
+                Jasmin era a namorada (na época, por que ninguém aguenta ele tanto tempo) do comandante <br>
+                em uma noite quando o comandante estava de tocaia ele ouvi certos rumores e quando entrou na tenda de Jackson la estava ele... <br>
+                pelado... transando com Jasmin <br>
+                o comandante pegou os dois e os baniu de Dash <br>
+                ambos sairam pelados e sem rumo <br>
+                <br>
+                <i> "O plano é o seguinte, omitimos para o comandante, conversamos com Jacks (apelido de Jackson)<br>
+                    e o convecemos de juntar os dois acampamentos"</i> fala Scarlet <br>
+                <i> "Realmente parece ser uma ideia interesse, vamos tem mais comida para sobreviver, já que os melhores caçadores <br>
+                    estão com Jacks, e aumenta a nossa proteção" </i> Você fala <br>
+                <i> "Posso confiar em você? "</i> Pergunta Scarlet <br>
+                <br>
+                O que fazer? se eu aceitar a proposta de Scarlet, podemos trazer uma vida melhor para os nossos amigos <br>
+                Mas se eu concordar o comandante vai querer começar uma guerra <br>
+            </p>
+            <h1> O que você quer fazer? </h1>
+            <button> Concordar com a junção </button>
+            <button> Recusar a proposta </button>
         </div>
         <div hidden="true" id="barulho" style="padding: 10px; height: 100%; vertical-align: middle; place-items:unset;">
             <h1> Voce escolheu seguir o barulho </h1>
             <p style="font-size: 12px;"> <i>Devido a sua escolha, o final foi alterado</i> </p>
             <p>
-                Ao sair do seu quarto você encontra corredores vazions <br>
+                Ao sair do seu quarto você encontra corredores vazios <br>
                 <i>destruidos</i><br>
                 <br>
                 <br>
