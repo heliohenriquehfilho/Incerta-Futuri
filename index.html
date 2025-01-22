@@ -2,147 +2,17 @@
     <head>
         <title> INSERTA FUTURI </title>
         <link rel="sortcut icon" href="i.f..png" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
-    <style>
-        body, html {
-            height: 99%;
-            background-color: black;
-            color: wheat;
-            font-size: 18px;
-            text-align: center;
-            font-family: 'MetropolisRegular', sans-serif;
-        }
-        .audio {
-            background-image: url("incerta futuri.png");
-            height: 100%;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-attachment: fixed;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50%;
-            color: #8f0000;
-            opacity: 58%;
-            flex-direction: column;
-            text-shadow: 2px 2px black;
-        }
-        button {
-            color: #8f0000;
-            font-size: 21px;
-        }
-        #new {
-            text-align: center;
-            color: wheat;
-            height: 100%;
-            font-size: 21px;
-        }
-        .wakingup {
-            padding: 10px;
-            font-size: 21px;
-            transition: ease-in;
-        }
-        h1 {
-            margin-bottom: -3px;
-            margin-top: -3px;
-        }
-    </style>
-    <script>
-        function run(){
-            window.scrollTo(0, 0);
-            document.getElementById("message").hidden = false
-            document.getElementById("bttn2").hidden = true
-            document.getElementById("start").hidden = false
-            var msc = new Audio('mixkit-piano-horror-671.mp3')
-            msc.play()
-            window.scrollTo(0, 0);
-        }
-        function start(){
-            window.scrollTo(0, 0);
-            document.getElementById("new").hidden = false;
-            document.getElementById("scro").hidden = false;
-            document.getElementById('start').hidden = true;
-            document.getElementById('message').hidden = true;
-            document.getElementById("audio").style.display = 'none'
-            window.scrollTo(0, 0);
-        }
-        function janela(){
-            window.scrollTo(0, 0);
-            document.getElementById("new").hidden = true;
-            document.getElementById("janela").hidden = false;
-            window.scrollTo(0, 0);
-        }
-        function barulho(){
-            window.scrollTo(0, 0);
-            document.getElementById("new").hidden = true;
-            document.getElementById("barulho").hidden = false;
-            window.scrollTo(0, 0);
-        }
-        function gritar(){
-            window.scrollTo(0, 0);
-            document.getElementById("janela").hidden = true;
-            document.getElementById("gritar").hidden = false;
-            window.scrollTo(0, 0);
-        }
-        function C1a(){
-            window.scrollTo(0, 0);
-            document.getElementById("gritar").hidden = true;
-            document.getElementById("c1a").hidden = false;
-        }
-        function levantar(){
-            window.scrollTo(0, 0);
-            document.getElementById("janela").hidden = true;
-            document.getElementById("levantar").hidden = false;
-        }
-        function C1b(){
-            window.scrollTo(0, 0);
-            document.getElementById("levantar").hidden = true;
-            document.getElementById("c1b").hidden = false;
-            $(window).scrollTop(0);
-        }
-        function concordar(){
-            window.scrollTo(0, 0);
-            document.getElementById("c1b").hidden = true;
-            document.getElementById("concordar").hidden = false;
-            $(window).scrollTop(0);
-        }
-        function concordar2(){
-            window.scrollTo(0, 0);
-            document.getElementById("c1a").hidden = true;
-            document.getElementById("concordar2").hidden = false;
-            $(window).scrollTop(0);
-        }
-        function chamar(){
-            window.scrollTo(0, 0);
-            document.getElementById("barulho").hidden = true;
-            document.getElementById("chamar").hidden = false;
-            $(window).scrollTop(0);
-        }
-        function c1c(){
-            window.scrollTo(0, 0);
-            document.getElementById("chamar").hidden = true;
-            document.getElementById("c1c").hidden = false;
-        }
-        function silencio (){
-            window.scrollTo(0, 0);
-            document.getElementById("barulho").hidden = true;
-            document.getElementById("silencio").hidden = false
-        }
-    </script>
     <body>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css"/>
         <div class="audio" id="audio">
             <div class="container1">
                 
             </div>
-            <div hidden="false" class="container2">
-                <input hidden="true" onclick="run()" type="image" src="https://icon-library.com/images/play-button-icon-png/play-button-icon-png-23.jpg" id="bttn" width="100" height="100" alt="submit"/>  
+            <div class="container2">
+                <input hidden="false" onclick="run()" type="image" src="https://icon-library.com/images/play-button-icon-png/play-button-icon-png-23.jpg" id="bttn" width="100" height="100" alt="submit"/>  
                 <button id="bttn2" onclick="run()"> START </button>
                 <h1 id="message" hidden="true"> FUCK THIS! </h1>
                 <button hidden="true" id="start" onclick="start()"> START </button>
